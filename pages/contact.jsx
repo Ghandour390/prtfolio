@@ -1,47 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import NavBar from "../src/compennets/visiteur/NavBar";
 import TitreDescription from "../src/compennets/visiteur/titreDescription";
 import ContactInfo from "../src/compennets/visiteur/contactInfo";
 import CartMessage from "../src/compennets/visiteur/cartMessage";
 import SocialMedia from "../src/compennets/visiteur/socialMedia";
+import { userData } from "../src/data/portfolioData";
 
 export default function ContactPage() {
-  const [userData, setUserData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/user")
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch user");
-        return res.json();
-      })
-      .then((data) => {
-        setUserData(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setError(err);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-transparent flex items-center justify-center">
-        <p className="text-gray-400 text-xl">Loading...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="min-h-screen bg-transparent flex items-center justify-center">
-        <p className="text-gray-400 text-xl">Error: {error.message}</p>
-      </div>
-    );
-  }
   return (
     <div className="min-h-screen bg-transparent">
       <NavBar />

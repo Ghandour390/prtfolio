@@ -1,60 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CartProject from "../src/compennets/visiteur/cartProject";
 import TagMain from "../src/compennets/visiteur/tagMain";
 import ViewAllProjectsButton from "../src/compennets/visiteur/ViewAllProjectsButton";
 import NavBar from "../src/compennets/visiteur/NavBar";
-
-const defaultUserName = "abdelhak_ghandour";
+import { userData, projects } from "../src/data/portfolioData";
 
 function homePage() {
-  const [userData, setUserData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [featuredProjects, setFeaturedProjects] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        // Fetch user basic info
-        const userRes = await fetch("http://localhost:3000/user");
-        if (!userRes.ok) throw new Error("Failed to fetch user");
-        const user = await userRes.json();
-
-        // Fetch projects (all projects for now, or filter by userId if multiple users exist)
-        const projectsRes = await fetch("http://localhost:3000/projects");
-        if (!projectsRes.ok) throw new Error("Failed to fetch projects");
-        const projects = await projectsRes.json();
-
-        // Combine data
-        setUserData(user);
-        setFeaturedProjects(projects.slice(0, 3));
-      } catch (err) {
-        console.error(err);
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="homePage bg-transparent min-h-screen flex items-center justify-center">
-        <p className="text-gray-400 text-xl">Loading...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="homePage bg-transparent min-h-screen flex items-center justify-center">
-        <p className="text-red-400 text-xl">Error: {error.message}</p>
-      </div>
-    );
-  }
+  const featuredProjects = projects.slice(0, 3);
 
   return (
     <div className="homePage bg-transparent min-h-screen pt-14 sm:pt-16">
