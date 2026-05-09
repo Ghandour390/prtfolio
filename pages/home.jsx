@@ -24,6 +24,7 @@ function homePage() {
               description={project.description}
               urlGit={project.urlGit}
               urlDemo={project.urlDemo}
+              tags={project.technologies}
             />
           ))
         ) : (

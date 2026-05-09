@@ -27,6 +27,7 @@ export default function ProjectPage() {
             urlDemo={project.urlDemo}
             image={project.image}
             createdAt={project.createdAt}
+            tags={project.technologies}
           />
         ))}
       </div>

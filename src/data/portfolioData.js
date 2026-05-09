@@ -21,22 +21,30 @@ export const competences = [
     { id: 3, title: "Programmation front-end", name: "TypeScript", percent: 60 },
     { id: 4, title: "Programmation front-end", name: "HTML/CSS", percent: 80 },
     { id: 5, title: "Programmation front-end", name: "TailwindCSS", percent: 75 },
-    { id: 6, title: "Stack back-end", name: "NodeJS", percent: 65 },
-    { id: 7, title: "Stack back-end", name: "ExpressJS", percent: 80 },
-    { id: 8, title: "Stack back-end", name: "PHP", percent: 80 },
-    { id: 9, title: "Stack back-end", name: "Laravel", percent: 90 },
-    { id: 10, title: "Stack back-end", name: "GraphQL", percent: 60 },
-    { id: 11, title: "Tests", name: "Jest", percent: 60 },
-    { id: 12, title: "Tests", name: "Mocha/Chai", percent: 60 },
-    { id: 13, title: "Cloud et Infrastructure", name: "Docker", percent: 65 },
-    { id: 14, title: "Cloud et Infrastructure", name: "CI/CD", percent: 75 },
-    { id: 15, title: "Cloud et Infrastructure", name: "Jenkins", percent: 50 },
-    { id: 16, title: "Bases de données", name: "MongoDB", percent: 80 },
-    { id: 17, title: "Bases de données", name: "MySQL", percent: 85 },
-    { id: 18, title: "Bases de données", name: "PostgreSQL", percent: 85 },
-    { id: 19, title: "Bases de données", name: "Redis", percent: 70 },
-    { id: 20, title: "Gestion des projets", name: "Agile/Scrum", percent: 80 },
-    { id: 21, title: "Control de version", name: "Git/GitHub/GitLab", percent: 80 }
+    { id: 6, title: "Programmation front-end", name: "NextJS", percent: 70 },
+    { id: 7, title: "Stack back-end", name: "NodeJS", percent: 65 },
+    { id: 8, title: "Stack back-end", name: "ExpressJS", percent: 80 },
+    { id: 9, title: "Stack back-end", name: "NestJS", percent: 80 },
+    {id:10,title:"Stack back-end",name:"GOLANG",percent:30},
+    { id: 11, title: "Stack back-end", name: "PHP", percent: 80 },
+    { id: 12, title: "Stack back-end", name: "Laravel", percent: 90 },
+    { id: 13, title: "Stack back-end", name: "GraphQL", percent: 60 },
+    { id: 14, title: "Tests", name: "Jest", percent: 60 },
+    { id: 15, title: "Tests", name: "Mocha/Chai", percent: 60 },
+    { id: 16, title: "Cloud et Infrastructure", name: "Docker", percent: 65 },
+    { id: 17, title: "Cloud et Infrastructure", name: "CI/CD", percent: 75 },
+    { id: 18, title: "Cloud et Infrastructure", name: "Jenkins", percent: 50 },
+    { id: 19, title: "Cloud et Infrastructure", name: "Kubernetes", percent: 20 },
+    { id: 22, title: "Bases de données", name: "MongoDB", percent: 80 },
+    { id: 23, title: "Bases de données", name: "MySQL", percent: 85 },
+    { id: 24, title: "Bases de données", name: "PostgreSQL", percent: 85 },
+    { id: 25, title: "Bases de données", name: "Redis", percent: 80 },
+    { id: 25, title: "Gestion des projets", name: "Agile/Scrum", percent: 80 },
+    { id: 25, title: "Control de version", name: "Git/GitHub/GitLab", percent: 80 },
+    { id: 26, title: "Monitoring", name: "Prometheus", percent: 30 },
+    { id: 27, title: "Monitoring", name: "Grafana", percent: 30 },
+    { id: 28, title: "Monitoring", name: "loki", percent: 30 },
+    { id: 29, title: "Monitoring", name: "promtail", percent: 30 },
 ];
 
 export const projects = [
@@ -44,7 +52,7 @@ export const projects = [
         id: 1,
         titre: "TrajetCamen - Application Full-Stack de Gestion de Flotte",
         description: "Application web de gestion de flotte avec dashboard administrateur, suivi des trajets, véhicules, chauffeurs, consommation, carburants et maintenance préventive.",
-        urlGit: "https://github.com/Abdelhak-Ghandour",
+        urlGit: "https://github.com/Ghandour390/trajet.git",
         urlDemo: "",
         image: "",
         technologies: ["React 18", "Redux Toolkit", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "Docker", "MinIO"]
@@ -53,7 +61,7 @@ export const projects = [
         id: 2,
         titre: "ResQ - Solution de Dispatching d'Ambulances",
         description: "Application web de gestion de flotte d'ambulances avec cartographie interactive en temps réel. Permet le suivi des véhicules d'urgence, la gestion des incidents et l'optimisation des interventions via un tableau de bord complet.",
-        urlGit: "https://github.com/Abdelhak-Ghandour",
+        urlGit: "https://github.com/Ghandour390/resq.git",
         urlDemo: "",
         image: "",
         technologies: ["React 19", "TypeScript", "Redux Toolkit", "Tailwind CSS", "React-Leaflet"]
@@ -62,10 +70,19 @@ export const projects = [
         id: 3,
         titre: "CarFlow - Plateforme de gestion hospitalière",
         description: "Plateforme de gestion hospitalière full-stack avec authentification JWT, gestion des patients et interface React/TypeScript moderne.",
-        urlGit: "https://github.com/Abdelhak-Ghandour",
+        urlGit: "https://github.com/Ghandour390/carflow",
         urlDemo: "",
         image: "",
         technologies: ["React", "TypeScript", "Redux", "Tailwind CSS", "Leaflet Maps", "JSON Server", "Express", "MongoDB", "Redis", "JWT", "Docker Compose"]
+    },
+    {
+        id: 4,
+        titre: "reservation",
+        description: "Une organisation (centre de formation, entreprise, association ou espace de coworking) organise régulièrement des événements (formations, ateliers, conférences, réunions internes)",
+        urlGit: "https://github.com/Ghandour390/r-servation.git",
+        urlDemo: "",
+        image: "",
+        technologies: ["NestJS", "PostgreSQL", "JWT", "Docker", "MinIO","Grafana","Prometheus"]
     }
 ];
 
@@ -77,7 +94,15 @@ export const experience = [
         description: "Développement d'une application de mise en relation entre créateurs et clients, participation à la conception et au développement complet de l'application. Création du backend avec Laravel et MySQL, développement frontend réactif avec Nuxt 3, Tailwind CSS, HTML et CSS. Intégration de la base de données et gestion des interactions client-serveur. Collaboration active avec l'équipe pour assurer la cohérence technique et fonctionnelle du projet.",
         dateDebut: "2025-05-01",
         dateFin: "2025-07-31"
-    }
+    },
+    {
+    id: 2,
+    poste: "Développeur Full Stack ExpressJs / ReactJs",
+    entreprise: "Tython, Casablanca",
+    description: "Développement d'une solution que permet a la demaine partager les template avec autre demaine dans app.tybotflow.com et aussi ajoutie system de monitoring .",
+    dateDebut: "2026-04-01",
+    dateFin: "En cours"
+}
 ];
 
 export const formation = [
