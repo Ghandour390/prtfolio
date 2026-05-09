@@ -25,7 +25,7 @@ export const competences = [
     { id: 7, title: "Stack back-end", name: "NodeJS", percent: 65 },
     { id: 8, title: "Stack back-end", name: "ExpressJS", percent: 80 },
     { id: 9, title: "Stack back-end", name: "NestJS", percent: 80 },
-    {id:10,title:"Stack back-end",name:"GOLANG",percent:30},
+    { id: 10, title: "Stack back-end", name: "GOLANG", percent: 30 },
     { id: 11, title: "Stack back-end", name: "PHP", percent: 80 },
     { id: 12, title: "Stack back-end", name: "Laravel", percent: 90 },
     { id: 13, title: "Stack back-end", name: "GraphQL", percent: 60 },
@@ -64,7 +64,7 @@ export const projects = [
         urlGit: "https://github.com/Ghandour390/resq.git",
         urlDemo: "",
         image: "",
-        technologies: ["React 19", "TypeScript", "Redux Toolkit", "Tailwind CSS", "React-Leaflet"]
+        technologies: ["React 19", "TypeScript", "Redux Toolkit", "Tailwind CSS"]
     },
     {
         id: 3,
@@ -81,8 +81,8 @@ export const projects = [
         description: "Une organisation (centre de formation, entreprise, association ou espace de coworking) organise régulièrement des événements (formations, ateliers, conférences, réunions internes)",
         urlGit: "https://github.com/Ghandour390/r-servation.git",
         urlDemo: "",
-        image: "",
-        technologies: ["NestJS", "PostgreSQL", "JWT", "Docker", "MinIO","Grafana","Prometheus"]
+        image: "/reservation.png",
+        technologies: ["NestJS", "Nextjs", "PostgreSQL", "JWT", "Docker", "MinIO", "Grafana", "Prometheus"]
     }
 ];
 
@@ -96,13 +96,13 @@ export const experience = [
         dateFin: "2025-07-31"
     },
     {
-    id: 2,
-    poste: "Développeur Full Stack ExpressJs / ReactJs",
-    entreprise: "Tython, Casablanca",
-    description: "Développement d'une solution que permet a la demaine partager les template avec autre demaine dans app.tybotflow.com et aussi ajoutie system de monitoring .",
-    dateDebut: "2026-04-01",
-    dateFin: "En cours"
-}
+        id: 2,
+        poste: "Développeur Full Stack ExpressJs / ReactJs",
+        entreprise: "Tython, Casablanca",
+        description: "Développement d'une solution que permet a la demaine partager les template avec autre demaine dans app.tybotflow.com et aussi ajoutie system de monitoring .",
+        dateDebut: "2026-04-01",
+        dateFin: "En cours"
+    }
 ];
 
 export const formation = [
