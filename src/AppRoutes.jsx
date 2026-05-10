@@ -26,13 +26,26 @@ const getAudioContext = () => {
 if (typeof window !== 'undefined') {
   const unlockAudio = () => {
     const ctx = getAudioContext();
-    if (ctx && ctx.state === 'suspended') {
-      ctx.resume().then(() => {
-        // Once successfully resumed and unlocked, remove listeners
-        window.removeEventListener('click', unlockAudio);
-        window.removeEventListener('touchstart', unlockAudio);
-      });
+    if (ctx) {
+      if (ctx.state === 'suspended') {
+        ctx.resume();
+      }
+      // Force hardware-level activation on iOS & Android by playing an ultra-short, silent sound wave
+      try {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        gain.gain.setValueAtTime(0.0001, ctx.currentTime);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.01);
+      } catch (err) {
+        console.warn("Silent hardware activation skipped:", err);
+      }
     }
+    // Always remove listeners after the first user gesture
+    window.removeEventListener('click', unlockAudio);
+    window.removeEventListener('touchstart', unlockAudio);
   };
   window.addEventListener('click', unlockAudio);
   window.addEventListener('touchstart', unlockAudio);
@@ -86,9 +99,9 @@ const playHeartbeatSound = () => {
 
     const now = ctx.currentTime;
     // Beat 1: Lub (Base 100Hz, Sub 50Hz, slightly longer & louder)
-    playBeat(now, 100, 50, 0.24, 0.6);
+    playBeat(now, 100, 50, 0.24, 1.5);
     // Beat 2: Dub (Base 110Hz, Sub 55Hz, slightly shorter)
-    playBeat(now + 0.16, 110, 55, 0.20, 0.4);
+    playBeat(now + 0.16, 110, 55, 0.20, 1.1);
 
   } catch (error) {
     console.warn("Audio play skipped:", error);
