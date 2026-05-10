@@ -12,7 +12,7 @@ import { LanguageProvider } from './context/LanguageContext';
 function App() {
   return (
     <LanguageProvider>
-      <div className="App bg-[#191a1d] min-h-screen text-white bg-cover bg-fixed bg-center" style={{ backgroundImage: "url('/portfolio_bg.png')" }}>
+      <div className="App bg-[#191a1d] min-h-screen text-white bg-cover bg-fixed bg-center pb-20 md:pb-0" style={{ backgroundImage: "url('/portfolio_bg.png')" }}>
         <Router>
           <Routes>
             {/* Public Portfolio Routes */}
