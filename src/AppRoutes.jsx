@@ -7,25 +7,28 @@ import Experience from '../pages/experience';
 import Formation from '../pages/formation';
 import Project from '../pages/project';
 import Skills from '../pages/skills';
+import { LanguageProvider } from './context/LanguageContext';
 
 function App() {
   return (
-    <div className="App bg-gradient-to-b from-[#191a1d] to-[#23232b] min-h-screen text-white">
-      <Router>
-        <Routes>
-          {/* Public Portfolio Routes */}
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/formation" element={<Formation />} />
-          <Route path="/projects" element={<Project />} />
-          <Route path="/skills" element={<Skills />} />
+    <LanguageProvider>
+      <div className="App bg-[#191a1d] min-h-screen text-white bg-cover bg-fixed bg-center" style={{ backgroundImage: "url('/portfolio_bg.png')" }}>
+        <Router>
+          <Routes>
+            {/* Public Portfolio Routes */}
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/formation" element={<Formation />} />
+            <Route path="/projects" element={<Project />} />
+            <Route path="/skills" element={<Skills />} />
 
-          {/* Catch all - redirect to home */}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Router>
-    </div>
+            {/* Catch all - redirect to home */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Router>
+      </div>
+    </LanguageProvider>
   );
 }
 

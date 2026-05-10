@@ -15,6 +15,7 @@ export default defineConfig({
   },
   server: {
     port: 5174,
+    allowedHosts: true ,
     hmr: {
       overlay: true, // Affiche les erreurs HMR dans le navigateur
     },

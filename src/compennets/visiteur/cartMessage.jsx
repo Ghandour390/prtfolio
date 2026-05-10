@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Button from "../../components/shared/Button";
 import Toast, { useToast } from "../../components/shared/Toast";
+import { useLanguage } from "../../context/LanguageContext";
 
 // ============================================================
 // CONFIGURATION EMAILJS - LIÉ AU FICHIER .ENV
@@ -10,22 +11,24 @@ const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_x
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_xxxxxxx";
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "xxxxxxxxxxxxxxx";
 
-const CartMessage = ({
-	title = "Send a Message",
-	nameLabel = "Name",
-	emailLabel = "Email",
-	subjectLabel = "Subject",
-	messageLabel = "Message",
-	namePlaceholder = "Your name",
-	emailPlaceholder = "your.email@example.com",
-	subjectPlaceholder = "Subject of your message",
-	messagePlaceholder = "Tell me about your project or just say hello...",
-	buttonLabel = "Send Message",
-}) => {
+const CartMessage = () => {
+	const { t } = useLanguage();
 	const formRef = useRef();
 	const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 	const [loading, setLoading] = useState(false);
 	const { toast, showToast, hideToast } = useToast();
+
+	// Dynamic translations
+	const title = t("contact_title_form");
+	const nameLabel = t("contact_name");
+	const emailLabel = t("contact_email");
+	const subjectLabel = t("contact_subject");
+	const messageLabel = t("contact_message");
+	const namePlaceholder = t("contact_name_placeholder");
+	const emailPlaceholder = t("contact_email_placeholder");
+	const subjectPlaceholder = t("contact_subject_placeholder");
+	const messagePlaceholder = t("contact_message_placeholder");
+	const buttonLabel = t("contact_send");
 
 	const handleChange = (e) => {
 		setForm({ ...form, [e.target.name]: e.target.value });
@@ -55,11 +58,11 @@ const CartMessage = ({
 					EMAILJS_PUBLIC_KEY
 				);
 			}
-			showToast("Message envoyé avec succès ! ✓", "success");
+			showToast(`${t("contact_success")} ✓`, "success");
 			setForm({ name: "", email: "", subject: "", message: "" });
 		} catch (error) {
 			console.error("EmailJS Error:", error);
-			showToast("Erreur lors de l'envoi. Veuillez vérifier votre configuration EmailJS.", "error");
+			showToast(t("contact_error"), "error");
 		} finally {
 			setLoading(false);
 		}
@@ -82,7 +85,7 @@ const CartMessage = ({
 						value={form.name}
 						onChange={handleChange}
 						placeholder={namePlaceholder}
-						className="w-full px-4 py-2 rounded border border-[#23232b] bg-[#23262b] text-[#f6f3d7] focus:outline-none focus:border-[#ffc72c]"
+						className="w-full px-4 py-2.5 rounded-lg border border-[#3a3f47] bg-[#191a1d] text-[#f6f3d7] placeholder-[#6b7280] focus:outline-none focus:border-[#ffc72c] focus:ring-1 focus:ring-[#ffc72c] transition-all duration-300"
 						required
 					/>
 				</div>
@@ -94,7 +97,7 @@ const CartMessage = ({
 						value={form.email}
 						onChange={handleChange}
 						placeholder={emailPlaceholder}
-						className="w-full px-4 py-2 rounded border border-[#23232b] bg-[#23262b] text-[#f6f3d7] focus:outline-none focus:border-[#ffc72c]"
+						className="w-full px-4 py-2.5 rounded-lg border border-[#3a3f47] bg-[#191a1d] text-[#f6f3d7] placeholder-[#6b7280] focus:outline-none focus:border-[#ffc72c] focus:ring-1 focus:ring-[#ffc72c] transition-all duration-300"
 						required
 					/>
 				</div>
@@ -106,7 +109,7 @@ const CartMessage = ({
 						value={form.subject}
 						onChange={handleChange}
 						placeholder={subjectPlaceholder}
-						className="w-full px-4 py-2 rounded border border-[#23232b] bg-[#23262b] text-[#f6f3d7] focus:outline-none focus:border-[#ffc72c]"
+						className="w-full px-4 py-2.5 rounded-lg border border-[#3a3f47] bg-[#191a1d] text-[#f6f3d7] placeholder-[#6b7280] focus:outline-none focus:border-[#ffc72c] focus:ring-1 focus:ring-[#ffc72c] transition-all duration-300"
 						required
 					/>
 				</div>
@@ -117,7 +120,7 @@ const CartMessage = ({
 						value={form.message}
 						onChange={handleChange}
 						placeholder={messagePlaceholder}
-						className="w-full px-4 py-2 rounded border border-[#23232b] bg-[#23262b] text-[#f6f3d7] focus:outline-none focus:border-[#ffc72c] min-h-[100px]"
+						className="w-full px-4 py-2.5 rounded-lg border border-[#3a3f47] bg-[#191a1d] text-[#f6f3d7] placeholder-[#6b7280] focus:outline-none focus:border-[#ffc72c] focus:ring-1 focus:ring-[#ffc72c] transition-all duration-300 min-h-[120px]"
 						required
 					/>
 				</div>
@@ -134,7 +137,7 @@ const CartMessage = ({
 						</svg>
 					}
 				>
-					{loading ? "Envoi en cours..." : buttonLabel}
+					{loading ? t("contact_sending") : buttonLabel}
 				</Button>
 			</form>
 
@@ -149,4 +152,3 @@ const CartMessage = ({
 };
 
 export default CartMessage;
-

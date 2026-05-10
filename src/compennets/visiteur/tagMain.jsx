@@ -1,10 +1,7 @@
 import React from "react";
 import profileImg from "../../assets/img/ghandour.png";
 import ViewAllProjectsButton from "./ViewAllProjectsButton";
-
-
-
-
+import { useLanguage } from "../../context/LanguageContext";
 
 const DEFAULT_USER = {
   id: "",
@@ -17,13 +14,12 @@ const DEFAULT_USER = {
   cover: null,
   adresse: "settat, maroc",
   biographie: "Développeur passionné par la création d’applications web modernes.",
-
-  
 };
 
 export default function TagMain({ user }) {
   console.log("check the data in main", user) 
   const userData = user || DEFAULT_USER;
+  const { t } = useLanguage();
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 bg-transparent text-center relative py-8 pt-20 sm:pt-24">
@@ -39,12 +35,12 @@ export default function TagMain({ user }) {
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-1 sm:mb-2 animate-fade-in-up animate-gradient-text bg-gradient-to-r from-[#f5eec5] via-[#ffc72c] to-[#f5eec5] bg-clip-text text-transparent px-4">
           {userData.nom} {userData.prenom}
         </h1>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#ffc72c] mb-2 sm:mb-4 px-4">{userData.titre || DEFAULT_USER.titre}</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#ffc72c] mb-2 sm:mb-4 px-4">{t("home_role")}</h2>
         <p className="max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 px-6 leading-relaxed">
-          {userData.biographie || DEFAULT_USER.biographie}
+          {t("home_bio")}
         </p>
 
-        <ViewAllProjectsButton name="View Projects"/>
+        <ViewAllProjectsButton name={t("nav_projects")}/>
 
         <div className="flex gap-6 sm:gap-8 justify-center mt-4 sm:mt-2 text-xl sm:text-2xl text-gray-400">
           <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#ffc72c] transition transform hover:scale-110" aria-label="GitHub">

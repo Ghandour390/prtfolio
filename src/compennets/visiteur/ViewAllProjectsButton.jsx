@@ -8,7 +8,7 @@ export default function ViewAllProjectsButton({ name }) {
   const navigate = useNavigate();
   return (
     <button
-      onClick={() => navigate('/project')}
+      onClick={() => navigate('/projects')}
       className="mx-auto flex items-center gap-3 px-8 py-3 border border-[#ffc72c] text-[#f5eec5] font-bold text-color-transparent rounded transition hover:bg-[#23232b] hover:border-[#ffd966] text-lg mt-8"
       style={{ minWidth: 240 }}
     >

@@ -1,20 +1,21 @@
 
 import React from "react";
+import { useLanguage } from "../../context/LanguageContext";
 
 const defaultInfo = {
-	email: "abdelhakghandour@gmail.com",
 	phone: "+212 602432851",
 	location: "youssoufia, Morocco",
 };
 
 export default function ContactInfo(props) {
-	const email = props.email || defaultInfo.email;
+	const { t } = useLanguage();
+	const email = props.email || "abdelhakghandour@gmail.com";
 	const phone = props.phone || defaultInfo.phone;
 	const location = props.location || defaultInfo.location;
 
 	return (
 		<div className="bg-[#23262b] rounded-xl p-6 w-full mt-6 border border-[#23232b] text-left shadow flex flex-col gap-4 overflow-hidden">
-		<h2 className="text-2xl font-bold text-[#f6f3d7] mb-2">Contact Info</h2>
+		<h2 className="text-2xl font-bold text-[#f6f3d7] mb-2">{t("contact_info_title")}</h2>
 		<div className="flex items-center gap-3">
 			<span className="bg-[#232323] rounded-lg p-2 flex items-center justify-center">
 				<svg width="24" height="24" fill="none" stroke="#ffc72c" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg>

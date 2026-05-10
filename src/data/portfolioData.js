@@ -5,10 +5,10 @@ export const userData = {
     userName: "abdelhak_ghandour",
     nom: "GHANDOUR",
     prenom: "Abdelhak",
-    titre: "Développeur Full-Stack PHP | MERN-STACK JS",
-    biographie: "Développeur Full Stack avec expertise en ReactJS, Node.js, Laravel et technologies cloud. Passionné par la création d'applications web performantes et innovantes.",
-    adresse: "Agadir, Maroc",
-    dateNaissance: "1995-01-01",
+    titre: "Développeur Full-Stack JavaScript | PHP",
+    biographie: "Développeur Full-Stack expert en stack MERN et NestJS. Spécialisé dans la conception d'architectures backend robustes et scalables, j'allie performance technique et interfaces utilisateurs fluides pour créer des solutions digitales de haute précision.",
+    adresse: "casablanca, Maroc",
+    dateNaissance: "1996-03-20",
     telephone: "+212 6 24 53 05 46",
     email: "abdelhakghandour6@gmail.com",
     linkedin: "ghandourabdelhak",
@@ -16,19 +16,20 @@ export const userData = {
 };
 
 export const competences = [
-    { id: 1, title: "Programmation front-end", name: "ReactJS", percent: 70 },
-    { id: 2, title: "Programmation front-end", name: "Js(ES6+)", percent: 70 },
-    { id: 3, title: "Programmation front-end", name: "TypeScript", percent: 60 },
-    { id: 4, title: "Programmation front-end", name: "HTML/CSS", percent: 80 },
-    { id: 5, title: "Programmation front-end", name: "TailwindCSS", percent: 75 },
-    { id: 6, title: "Programmation front-end", name: "NextJS", percent: 70 },
-    { id: 7, title: "Stack back-end", name: "NodeJS", percent: 65 },
+    { id: 1, title: "Stack front-end", name: "ReactJS", percent: 70 },
+    { id: 2, title: "Stack front-end", name: "Js(ES6+)", percent: 70 },
+    { id: 3, title: "Stack front-end", name: "TypeScript", percent: 60 },
+    { id: 4, title: "Stack front-end", name: "HTML/CSS", percent: 80 },
+    { id: 5, title: "Stack front-end", name: "TailwindCSS", percent: 75 },
+    { id: 6, title: "Stack front-end", name: "NextJS", percent: 70 },
+    { id: 7, title: "Stack back-end", name: "NodeJS", percent: 65 } ,
     { id: 8, title: "Stack back-end", name: "ExpressJS", percent: 80 },
     { id: 9, title: "Stack back-end", name: "NestJS", percent: 80 },
     { id: 10, title: "Stack back-end", name: "GOLANG", percent: 30 },
     { id: 11, title: "Stack back-end", name: "PHP", percent: 80 },
     { id: 12, title: "Stack back-end", name: "Laravel", percent: 90 },
     { id: 13, title: "Stack back-end", name: "GraphQL", percent: 60 },
+    { id: 131, title: "Stack back-end", name: "REST API", percent: 85 },
     { id: 14, title: "Tests", name: "Jest", percent: 60 },
     { id: 15, title: "Tests", name: "Mocha/Chai", percent: 60 },
     { id: 16, title: "Cloud et Infrastructure", name: "Docker", percent: 65 },
@@ -54,7 +55,7 @@ export const projects = [
         description: "Application web de gestion de flotte avec dashboard administrateur, suivi des trajets, véhicules, chauffeurs, consommation, carburants et maintenance préventive.",
         urlGit: "https://github.com/Ghandour390/trajet.git",
         urlDemo: "",
-        image: "",
+        image: "/trajetcamen.png",
         technologies: ["React 18", "Redux Toolkit", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "Docker", "MinIO"]
     },
     {
@@ -63,17 +64,17 @@ export const projects = [
         description: "Application web de gestion de flotte d'ambulances avec cartographie interactive en temps réel. Permet le suivi des véhicules d'urgence, la gestion des incidents et l'optimisation des interventions via un tableau de bord complet.",
         urlGit: "https://github.com/Ghandour390/resq.git",
         urlDemo: "",
-        image: "",
+        image: "/resq.png",
         technologies: ["React 19", "TypeScript", "Redux Toolkit", "Tailwind CSS"]
     },
     {
         id: 3,
         titre: "CarFlow - Plateforme de gestion hospitalière",
         description: "Plateforme de gestion hospitalière full-stack avec authentification JWT, gestion des patients et interface React/TypeScript moderne.",
-        urlGit: "https://github.com/Ghandour390/carflow",
+        urlGit: "https://github.com/Ghandour390/carflow.git",
         urlDemo: "",
-        image: "",
-        technologies: ["React", "TypeScript", "Redux", "Tailwind CSS", "Leaflet Maps", "JSON Server", "Express", "MongoDB", "Redis", "JWT", "Docker Compose"]
+        image: "/carflow.png",
+        technologies: ["React", "Redux", "Tailwind CSS", "Express", "MongoDB", "Redis", "Docker"]
     },
     {
         id: 4,

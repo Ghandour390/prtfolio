@@ -1,17 +1,19 @@
-
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
 import './NavBar.css';
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/projects', label: 'Projects' },
-    { to: '/skills', label: 'Skills' },
-    { to: '/experience', label: 'Experience' },
-    { to: '/contact', label: 'Contact' },
+    { to: '/', labelKey: 'nav_home' },
+    { to: '/projects', labelKey: 'nav_projects' },
+    { to: '/skills', labelKey: 'nav_skills' },
+    { to: '/experience', labelKey: 'nav_experience' },
+    { to: '/formation', labelKey: 'nav_formation' },
+    { to: '/contact', labelKey: 'nav_contact' },
   ];
 
   const toggleMenu = () => {
@@ -30,42 +32,65 @@ export default function NavBar() {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 lg:gap-8 items-center">
-          {navLinks.map((link) => (
-            <li key={link.to}>
-              <NavLink
-                to={link.to}
-                className={({ isActive }) =>
-                  `font-semibold transition-colors duration-200 px-2 pb-1 ${
-                    isActive
-                      ? 'text-[#ffc72c] border-b-2 border-[#ffc72c]'
-                      : 'text-[#f5eec5] hover:text-[#ffc72c]'
-                  }`
-                }
-                end={link.to === '/'}
-              >
-                {link.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex gap-6 lg:gap-8 items-center">
+          <ul className="flex gap-6 lg:gap-8 items-center">
+            {navLinks.map((link) => (
+              <li key={link.to}>
+                <NavLink
+                  to={link.to}
+                  className={({ isActive }) =>
+                    `font-semibold transition-colors duration-200 px-2 pb-1 ${
+                      isActive
+                        ? 'text-[#ffc72c] border-b-2 border-[#ffc72c]'
+                        : 'text-[#f5eec5] hover:text-[#ffc72c]'
+                    }`
+                  }
+                  end={link.to === '/'}
+                >
+                  {t(link.labelKey)}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={toggleMenu}
-          className="md:hidden text-[#ffc72c] focus:outline-none z-30"
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+          {/* Desktop Language Selector Button */}
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1.5 px-3 py-1.5 border border-[#2e3138] hover:border-[#ffc72c] bg-[#191a1d] text-[#f6f3d7] hover:text-[#ffc72c] hover:shadow-md hover:shadow-[#ffc72c]/10 transition-all duration-300 rounded-full font-bold text-xs cursor-pointer"
+          >
+            <span>🌐</span>
+            <span>{language.toUpperCase()}</span>
+          </button>
+        </div>
+
+        {/* Mobile Header Buttons (Language + Toggle) */}
+        <div className="flex items-center gap-3 md:hidden z-30">
+          {/* Mobile Quick Language Toggle */}
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1 px-2.5 py-1 rounded-full border border-[#2e3138] bg-[#191a1d] text-xs font-bold text-[#ffc72c] active:scale-95 transition-transform"
+          >
+            <span>🌐</span>
+            <span>{language.toUpperCase()}</span>
+          </button>
+
+          {/* Hamburger Menu Icon */}
+          <button
+            onClick={toggleMenu}
+            className="text-[#ffc72c] focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
@@ -89,7 +114,7 @@ export default function NavBar() {
                 }
                 end={link.to === '/'}
               >
-                {link.label}
+                {t(link.labelKey)}
               </NavLink>
             </li>
           ))}
