@@ -5,7 +5,7 @@ export const userData = {
     userName: "abdelhak_ghandour",
     nom: "GHANDOUR",
     prenom: "Abdelhak",
-    titre: "Développeur Full-Stack JavaScript | PHP",
+    titre: "Software Engineer MERN Stack",
     biographie: "Développeur Full-Stack expert en stack MERN et NestJS. Spécialisé dans la conception d'architectures backend robustes et scalables, j'allie performance technique et interfaces utilisateurs fluides pour créer des solutions digitales de haute précision.",
     adresse: "casablanca, Maroc",
     dateNaissance: "1996-03-20",
