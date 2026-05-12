@@ -22,7 +22,7 @@ export default function TagMain({ user }) {
   const { t } = useLanguage();
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 bg-transparent text-center relative py-8 pt-20 sm:pt-24">
+    <section className="flex flex-col items-center justify-center min-h-screen px-0 sm:px-6 lg:px-8 bg-transparent text-center relative py-8 pt-20 sm:pt-24">
       <div className="flex flex-col items-center gap-4 sm:gap-6 w-full max-w-4xl">
         <div className="relative">
               <img
@@ -40,7 +40,7 @@ export default function TagMain({ user }) {
           {t("home_bio")}
         </p>
 
-        <ViewAllProjectsButton name={t("nav_projects")}/>
+        {/* <ViewAllProjectsButton name={t("nav_projects")}/> */}
 
         <div className="flex gap-6 sm:gap-8 justify-center mt-4 sm:mt-2 text-xl sm:text-2xl text-gray-400">
           <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#ffc72c] transition transform hover:scale-110" aria-label="GitHub">

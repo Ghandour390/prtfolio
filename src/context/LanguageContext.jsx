@@ -16,8 +16,8 @@ export const translations = {
     home_hello: "Bonjour, je suis",
     home_download_cv: "Télécharger CV",
     home_hire_me: "Me contacter",
-    home_role: "Ingénieur Logiciel MERN Stack",
-    home_bio: "Développeur Full-Stack expert en stack MERN et NestJS. Spécialisé dans la conception d'architectures backend robustes et scalables, j'allie performance technique et interfaces utilisateurs fluides pour créer des solutions digitales de haute précision.",
+    home_role: "Développeur Full-Stack",
+    home_bio: "Développeur Full-Stack MERN et NestJS. Spécialisé dans la conception d'architectures backend robustes et scalables, j'allie performance technique et interfaces utilisateurs fluides pour créer des solutions digitales de haute précision.",
 
     // Titles & Descriptions
     title_experience: "Expérience Professionnelle",
@@ -104,8 +104,8 @@ export const translations = {
     home_hello: "Hello, I am",
     home_download_cv: "Download CV",
     home_hire_me: "Contact Me",
-    home_role: "Software Engineer MERN Stack",
-    home_bio: "Full-Stack Developer expert in MERN stack and NestJS. Specializing in designing robust and scalable backend architectures, I combine technical performance with smooth user interfaces to create high-precision digital solutions.",
+    home_role: "Full-Stack Developer",
+    home_bio: "Junior Full-Stack Developer specializing in the MERN stack and NestJS. Designing robust and scalable backend architectures, I combine technical performance with fluid user interfaces to create high-precision digital solutions.",
 
     // Titles & Descriptions
     title_experience: "Professional Experience",

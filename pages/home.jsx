@@ -14,7 +14,7 @@ function homePage() {
     <div className="homePage bg-transparent min-h-screen pt-14 sm:pt-16">
       <NavBar />
       <TagMain user={userData} />
-      <h1 className="mt-4 sm:mt-8 md:mt-12 text-3xl sm:text-4xl md:text-5xl font-bold text-[#f5eec5] text-center mb-2 px-4">{t("title_projects")}</h1>
+      {/* <h1 className="mt-4 sm:mt-8 md:mt-12 text-3xl sm:text-4xl md:text-5xl font-bold text-[#f5eec5] text-center mb-2 px-4">{t("title_projects")}</h1>
       <h3 className="text-base sm:text-lg md:text-xl text-gray-400 text-center mb-6 sm:mb-8 font-normal px-4">{t("desc_projects")}</h3>
       <div className="projectsSection max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center sm:justify-items-start">
         {featuredProjects.length > 0 ? (
@@ -33,7 +33,7 @@ function homePage() {
           <p className="col-span-full text-center text-gray-400">No projects available</p>
         )}
       </div>
-      <ViewAllProjectsButton name={t("nav_projects")} />
+      <ViewAllProjectsButton name={t("nav_projects")} /> */}
     </div>
   );
 }
