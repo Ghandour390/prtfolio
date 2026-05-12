@@ -6,7 +6,7 @@ export const userData = {
     nom: "GHANDOUR",
     prenom: "Abdelhak",
     titre: "Software Engineer MERN Stack",
-    biographie: "Développeur Full-Stack expert en stack MERN et NestJS. Spécialisé dans la conception d'architectures backend robustes et scalables, j'allie performance technique et interfaces utilisateurs fluides pour créer des solutions digitales de haute précision.",
+    biographie: "Développeur Full-Stack junior en stack MERN et NestJS. Spécialisé dans la conception d'architectures backend robustes et scalables, j'allie performance technique et interfaces utilisateurs fluides pour créer des solutions digitales de haute précision.",
     adresse: "casablanca, Maroc",
     dateNaissance: "1996-03-20",
     telephone: "+212 6 24 53 05 46",
