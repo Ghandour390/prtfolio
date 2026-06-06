@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="circleView">
+      <circle cx="50" cy="50" r="44"/>
+    </clipPath>
+  </defs>
+  <image href="/ghandour.png" x="6" y="6" width="88" height="88" clip-path="url(#circleView)" preserveAspectRatio="xMidYMid slice" />
+  <circle cx="50" cy="50" r="47" fill="none" stroke="#ffc72c" stroke-width="6"/>
+</svg>
