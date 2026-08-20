@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <!-- White Circle Container -->
+  <circle cx="150" cy="150" r="145" fill="#FFFFFF"/>
+  
+  <g transform="translate(150, 150)" text-anchor="middle" font-family="'Century Gothic', 'Montserrat', 'Inter', 'Segoe UI', sans-serif" font-weight="700">
+    <!-- CUSTOMER text -->
+    <text x="0" y="-12" font-size="34" letter-spacing="3" fill="#111111">
+      CUST<tspan fill="#111111">O</tspan>MER
+    </text>
+    <!-- Coral dot inside CUSTOMER 'O' -->
+    <circle cx="43.5" cy="-24" r="5" fill="#FF5E5B" />
+
+    <!-- OBSESSION text -->
+    <text x="0" y="32" font-size="33" letter-spacing="2.5" fill="#111111">
+      <tspan fill="#111111">O</tspan>BSESSI<tspan fill="#111111">O</tspan>N
+    </text>
+    <!-- Teal dot inside first OBSESSION 'O' -->
+    <circle cx="-100" cy="20.5" r="5" fill="#20B2AA" />
+    <!-- Purple dot inside second OBSESSION 'O' -->
+    <circle cx="81.5" cy="20.5" r="5" fill="#7B68EE" />
+  </g>
+</svg>

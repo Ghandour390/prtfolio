@@ -22,13 +22,20 @@ export const competences = [
     { id: 4, title: "Stack front-end", name: "HTML/CSS", percent: 80 },
     { id: 5, title: "Stack front-end", name: "TailwindCSS", percent: 75 },
     { id: 6, title: "Stack front-end", name: "NextJS", percent: 70 },
-    { id: 7, title: "Stack back-end", name: "NodeJS", percent: 65 } ,
+    { id: 30, title: "Développement Mobile", name: "React Native", percent: 85 },
+    { id: 7, title: "Stack back-end", name: "NodeJS", percent: 65 },
     { id: 8, title: "Stack back-end", name: "ExpressJS", percent: 80 },
     { id: 9, title: "Stack back-end", name: "NestJS", percent: 80 },
     { id: 11, title: "Stack back-end", name: "PHP", percent: 80 },
     { id: 12, title: "Stack back-end", name: "Laravel", percent: 90 },
     { id: 13, title: "Stack back-end", name: "GraphQL", percent: 60 },
     { id: 131, title: "Stack back-end", name: "REST API", percent: 85 },
+    { id: 31, title: "AI Tools", name: "Cursor", percent: 95 },
+    { id: 32, title: "AI Tools", name: "Claude", percent: 90 },
+    { id: 33, title: "AI Tools", name: "Copilot", percent: 90 },
+    { id: 34, title: "AI Tools", name: "Codex", percent: 85 },
+    { id: 35, title: "AI Tools", name: "TestSprite", percent: 80 },
+    { id: 36, title: "AI Tools", name: "Antigravity", percent: 85 },
     { id: 14, title: "Tests", name: "Jest", percent: 60 },
     { id: 15, title: "Tests", name: "Mocha/Chai", percent: 60 },
     { id: 16, title: "Cloud et Infrastructure", name: "Docker", percent: 65 },
@@ -38,12 +45,12 @@ export const competences = [
     { id: 23, title: "Bases de données", name: "MySQL", percent: 85 },
     { id: 24, title: "Bases de données", name: "PostgreSQL", percent: 85 },
     { id: 25, title: "Bases de données", name: "Redis", percent: 80 },
-    { id: 25, title: "Gestion des projets", name: "Agile/Scrum", percent: 80 },
-    { id: 25, title: "Control de version", name: "Git/GitHub/GitLab", percent: 80 },
-    { id: 26, title: "Monitoring", name: "Prometheus", percent: 30 },
-    { id: 27, title: "Monitoring", name: "Grafana", percent: 30 },
-    { id: 28, title: "Monitoring", name: "loki", percent: 30 },
-    { id: 29, title: "Monitoring", name: "promtail", percent: 30 },
+    { id: 26, title: "Gestion des projets", name: "Agile/Scrum", percent: 80 },
+    { id: 27, title: "Control de version", name: "Git/GitHub/GitLab", percent: 80 },
+    { id: 28, title: "Monitoring", name: "Prometheus", percent: 30 },
+    { id: 29, title: "Monitoring", name: "Grafana", percent: 30 },
+    { id: 37, title: "Monitoring", name: "loki", percent: 30 },
+    { id: 38, title: "Monitoring", name: "promtail", percent: 30 },
 ];
 
 export const projects = [
@@ -87,12 +94,12 @@ export const projects = [
 
 export const experience = [
     {
-        id: 1,
-        poste: "Développeur Full Stack PHP Laravel (stage)",
-        entreprise: "Société Afristy",
-        description: "Développement d'une application de mise en relation entre créateurs et clients, participation à la conception et au développement complet de l'application. Création du backend avec Laravel et MySQL, développement frontend réactif avec Nuxt 3, Tailwind CSS, HTML et CSS. Intégration de la base de données et gestion des interactions client-serveur. Collaboration active avec l'équipe pour assurer la cohérence technique et fonctionnelle du projet.",
-        dateDebut: "2025-05-01",
-        dateFin: "2025-07-31"
+        id: 3,
+        poste: "Développeur Nest/Next & React Native",
+        entreprise: "Customer Obsession",
+        description: "Conception et développement d'applications mobiles sous React Native & Expo et d'architectures backend / APIs REST sous NestJS et Next.js. Intégration des APIs, gestion d'état global, authentification sécurisée, notifications push et déploiement de builds mobiles.",
+        dateDebut: "2026-07-01",
+        dateFin: "En cours"
     },
     {
         id: 2,
@@ -100,7 +107,15 @@ export const experience = [
         entreprise: "Tython, Casablanca",
         description: "Développement d'une solution que permet a la demaine partager les template avec autre demaine dans app.tybotflow.com et aussi ajoutie system de monitoring .",
         dateDebut: "2026-04-01",
-        dateFin: "En cours"
+        dateFin: "2026-07-01"
+    },
+    {
+        id: 1,
+        poste: "Développeur Full Stack PHP Laravel (stage)",
+        entreprise: "Société Afristy",
+        description: "Développement d'une application de mise en relation entre créateurs et clients, participation à la conception et au développement complet de l'application. Création du backend avec Laravel et MySQL, développement frontend réactif avec Nuxt 3, Tailwind CSS, HTML et CSS. Intégration de la base de données et gestion des interactions client-serveur. Collaboration active avec l'équipe pour assurer la cohérence technique et fonctionnelle du projet.",
+        dateDebut: "2025-05-01",
+        dateFin: "2025-07-31"
     }
 ];
 

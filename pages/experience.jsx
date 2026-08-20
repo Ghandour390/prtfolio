@@ -9,6 +9,16 @@ import { useLanguage } from "../src/context/LanguageContext";
 const CompanyLogo = ({ companyName }) => {
   const name = (companyName || "").toLowerCase();
 
+  if (name.includes("customer")) {
+    return (
+      <img 
+        src="/customer_obsession.svg" 
+        alt="Customer Obsession Logo" 
+        className="w-full h-full object-cover rounded-full bg-white p-1" 
+      />
+    );
+  }
+
   if (name.includes("tython")) {
     return (
       <img 

@@ -50,13 +50,17 @@ export const translations = {
     contact_location: "Localisation",
 
     // Dynamic Items (Experiences, Formations, Projects)
-    // Experience 1 (Afristy)
-    exp_1_poste: "Développeur Full Stack PHP Laravel (stage)",
-    exp_1_desc: "Développement d'une application de mise en relation entre créateurs et clients, participation à la conception et au développement complet de l'application. Création du backend avec Laravel et MySQL, développement frontend réactif avec Nuxt 3, Tailwind CSS, HTML et CSS. Intégration de la base de données et gestion des interactions client-serveur. Collaboration active avec l'équipe pour assurer la cohérence technique et fonctionnelle du projet.",
+    // Experience 3 (Customer Obsession)
+    exp_3_poste: "Développeur Nest/Next & React Native",
+    exp_3_desc: "Conception et développement d'applications mobiles sous React Native & Expo et d'architectures backend / APIs REST sous NestJS et Next.js. Intégration des APIs, gestion d'état global, authentification sécurisée, notifications push et déploiement de builds mobiles.",
+    exp_3_dateFin: "En cours",
     // Experience 2 (Tython)
     exp_2_poste: "Développeur Full Stack ExpressJs / ReactJs",
     exp_2_desc: "Développement d'une solution qui permet au domaine de partager les templates avec d'autres domaines dans app.tybotflow.com et ajout d'un système de monitoring.",
-    exp_2_dateFin: "En cours",
+    exp_2_dateFin: "2026-07-01",
+    // Experience 1 (Afristy)
+    exp_1_poste: "Développeur Full Stack PHP Laravel (stage)",
+    exp_1_desc: "Développement d'une application de mise en relation entre créateurs et clients, participation à la conception et au développement complet de l'application. Création du backend avec Laravel et MySQL, développement frontend réactif avec Nuxt 3, Tailwind CSS, HTML et CSS. Intégration de la base de données et gestion des interactions client-serveur. Collaboration active avec l'équipe pour assurer la cohérence technique et fonctionnelle du projet.",
 
     // Formation 1
     form_1_diplome: "Développement Web et Mobile",
@@ -83,7 +87,10 @@ export const translations = {
 
     // Skill Categories
     cat_stack_front_end: "Stack Front-End",
+    cat_developpement_mobile: "Développement Mobile",
+    cat_d_veloppement_mobile: "Développement Mobile",
     cat_stack_back_end: "Stack Back-End",
+    cat_ai_tools: "Outils IA & Assistants",
     cat_tests: "Tests & Validation",
     cat_cloud_et_infrastructure: "Cloud & Infrastructure",
     cat_bases_de_donnees: "Bases de Données",
@@ -138,13 +145,17 @@ export const translations = {
     contact_location: "Location",
 
     // Dynamic Items (Experiences, Formations, Projects)
-    // Experience 1 (Afristy)
-    exp_1_poste: "Full Stack PHP Laravel Developer (Internship)",
-    exp_1_desc: "Development of a matchmaking application between creators and clients, participating in the design and full-stack development of the application. Backend engineering with Laravel and MySQL, responsive frontend development with Nuxt 3, Tailwind CSS, HTML, and CSS. Database modeling and client-server communication handling. Active collaboration with teams to ensure structural coherence.",
+    // Experience 3 (Customer Obsession)
+    exp_3_poste: "Nest/Next & React Native Developer",
+    exp_3_desc: "Design and full-stack development of mobile applications with React Native & Expo, and backend REST APIs architecture with NestJS and Next.js. API integration, global state management, secure authentication, push notifications, and mobile build deployment.",
+    exp_3_dateFin: "Current",
     // Experience 2 (Tython)
     exp_2_poste: "Full Stack ExpressJs / ReactJs Developer",
     exp_2_desc: "Development of a solution that allows domains to share templates with other domains in app.tybotflow.com, along with building a custom monitoring infrastructure.",
-    exp_2_dateFin: "Current",
+    exp_2_dateFin: "2026-07-01",
+    // Experience 1 (Afristy)
+    exp_1_poste: "Full Stack PHP Laravel Developer (Internship)",
+    exp_1_desc: "Development of a matchmaking application between creators and clients, participating in the design and full-stack development of the application. Backend engineering with Laravel and MySQL, responsive frontend development with Nuxt 3, Tailwind CSS, HTML, and CSS. Database modeling and client-server communication handling. Active collaboration with teams to ensure structural coherence.",
 
     // Formation 1
     form_1_diplome: "Web and Mobile Development",
@@ -171,7 +182,10 @@ export const translations = {
 
     // Skill Categories
     cat_stack_front_end: "Front-End Stack",
+    cat_developpement_mobile: "Mobile Development",
+    cat_d_veloppement_mobile: "Mobile Development",
     cat_stack_back_end: "Back-End Stack",
+    cat_ai_tools: "AI Tools & Assistants",
     cat_tests: "Testing & Validation",
     cat_cloud_et_infrastructure: "Cloud & Infrastructure",
     cat_bases_de_donnees: "Databases",
